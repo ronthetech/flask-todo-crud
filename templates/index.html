@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
+<div class="content">
+	<h1>To-Do Master</h1>
+	{% if todos|length < 1 %}
+	<h4>There are no items todo, create one below</h4>
+	{% else %}
+	<table>
+		<tr>
+			<th>To-Do</th>
+			<th>Added</th>
+			<th>Actions</th>
+		</tr>
+		{% for todo in todos %}
+		<tr>
+			<td>{{ todo.content }}</td>
+			<td>{{ todo.date_created.date() }}</td>
+			<td>
+				<a href="/delete/{{ todo.id }}">Delete</a>
+				<br />
+				<a href="/update/{{ todo.id }}">Update</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+	<form action="/" method="post">
+		<input type="text" id="content" name="content" />
+		<input type="submit" value="Add To-Do" />
+	</form>
+</div>
+{% endblock %}

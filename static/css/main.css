@@ -1,0 +1,71 @@
+/*=============
+===VARIABLES===
+=============*/
+:root {
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	--transition: all 0.3s linear;
+	--clr-light-grey: #9eb2c7;
+	--letter-space-sml: 0.1rem;
+	--letter-space-mid: 0.25rem;
+	--letter-space-lrg: 0.5rem;
+
+	/* other colors */
+	--clr-white: #fff;
+	--clr-black: #000;
+	--clr-red-drk: rgb(178, 21, 34);
+	--clr-orange: rgb(255, 34, 18);
+	--clr-yellow: rgb(255, 180, 20);
+	--clr-grey: #979b91;
+	--clr-dark-blue-1: #063251;
+	--clr-blue: #3056df;
+	--clr-blue-2: #4da1ab;
+}
+
+/*===========
+====FONTS====
+===========*/
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+/*=============
+  =GLOBAL STYLES=
+  =============*/
+/*removes the padding and margin by default*/
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body,
+main {
+	display: flex;
+	flex-direction: column;
+	color: #aaa;
+	font-family: "Russo One";
+	background: var(--clr-dark-blue-1);
+}
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 3rem;
+}
+h3 {
+	font-size: 2rem;
+}
+ul {
+	list-style-type: none;
+	text-transform: uppercase;
+}
+a {
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: var(--clr-primary-drk);
+}
