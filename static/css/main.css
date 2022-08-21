@@ -17,9 +17,9 @@
 	--clr-orange: rgb(255, 34, 18);
 	--clr-yellow: rgb(255, 180, 20);
 	--clr-grey: #979b91;
-	--clr-dark-blue-1: #063251;
+	--clr-dark-blue-1: #08395c;
 	--clr-blue: #3056df;
-	--clr-blue-2: #4da1ab;
+	--clr-blue-2: #62b8c2;
 }
 
 /*===========
@@ -36,7 +36,7 @@
 *::after {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 }
 html {
 	font-size: 62.5%;
@@ -45,18 +45,21 @@ body,
 main {
 	display: flex;
 	flex-direction: column;
-	color: #aaa;
+	color: var(--clr-dark-blue-1);
 	font-family: "Russo One";
-	background: var(--clr-dark-blue-1);
+	background: var(--clr-light-grey);
 }
 h1 {
-	font-size: 5rem;
+	font-size: 4.5rem;
 }
 h2 {
 	font-size: 3rem;
 }
 h3 {
 	font-size: 2rem;
+}
+h4 {
+	font-size: 1.5rem;
 }
 ul {
 	list-style-type: none;
@@ -67,7 +70,7 @@ a {
 }
 a:hover,
 a:focus {
-	color: var(--clr-primary-drk);
+	color: var(--clr-blue);
 }
 
 .content {
@@ -75,15 +78,23 @@ a:focus {
 	width: 400px;
 }
 
+.title,
+.empty {
+	text-align: center;
+}
+.empty {
+}
 table,
 td,
 th {
-	border: 1px solid #aaa;
+	border: 1px solid var(--clr-black);
 }
 
 table {
 	border-collapse: collapse;
 	width: 100%;
+	box-shadow: var(--dark-shadow);
+	font-size: 1.2rem;
 }
 
 th {
@@ -93,6 +104,7 @@ th {
 td {
 	text-align: center;
 	padding: 5px;
+	background-color: var(--clr-blue-2);
 }
 
 .form {
@@ -100,5 +112,20 @@ td {
 }
 
 #content {
-	width: 70%;
+	width: 65%;
+}
+
+.btn {
+	padding: 3px;
+	border-radius: 10px;
+	background-color: var(--clr-dark-blue-1);
+	color: var(--clr-light-grey);
+	transition: var(--transition);
+}
+
+.btn:hover,
+.btn:focus {
+	color: var(--clr-dark-blue-1);
+	background-color: var(--clr-blue-2);
+	cursor: pointer;
 }

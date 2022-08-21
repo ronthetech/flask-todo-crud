@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
 <div class="content">
-	<h1>To-Do Master</h1>
+	<h1 class="title">To-Do Master</h1>
 	{% if todos|length < 1 %}
-	<h4>There are no items todo, create one below</h4>
+	<h4 class="empty">There are no items to-do, add one below</h4>
 	{% else %}
-	<table>
+	<table class="todos">
 		<tr>
 			<th>To-Do</th>
 			<th>Added</th>
@@ -23,9 +23,9 @@
 		{% endfor %}
 	</table>
 	{% endif %}
-	<form action="/" method="post">
-		<input type="text" id="content" name="content" />
-		<input type="submit" value="Add To-Do" />
+	<form action="/" method="post" class="form">
+		<input type="text" id="content" name="content" required />
+		<input type="submit" value="Add To-Do" class="btn" />
 	</form>
 </div>
 {% endblock %}
