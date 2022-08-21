@@ -1,6 +1,8 @@
 # flask-todo-crud
 A CRUD To-Do application made with Python, Flask, SQLite, HTML, CSS
 
+Hosted with Heroku: https://todomaster-crud.herokuapp.com/
+
 ## How To Run
 1. To install the dependencies:
 ```
