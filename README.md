@@ -1,5 +1,5 @@
 # flask-todo-crud
-A CRUD To-Do application made with Python, Flask, SQLite, HTML, CSS
+A CRUD To-Do application made with Python, Flask, Jinja, SQLite, HTML, CSS
 
 Hosted with Heroku: https://todomaster-crud.herokuapp.com/
 
