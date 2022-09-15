@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, redirect
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
+from flask import Flask, redirect, render_template, request
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 # telling our app where our db is located, can use mysql, postgresql
@@ -19,14 +20,14 @@ class ToDo(db.Model):  # database model
 
     # completed = db.Column(db.Integer, default=0) maybe use as a boolean?
 
-    # when the To-Do was created, automatic
+    # when the Todo was created, automatic
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     # creates string every time you create a new element
     def __repr__(self):
 
-        # return the To-Do and the id of the To-Do
-        return '<To-Do %r>' % self.id
+        # return the Todo and the id of the Todo
+        return '<Todo %r>' % self.id
 
 
 @app.route('/', methods=['POST', 'GET'])
